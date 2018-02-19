@@ -6,4 +6,5 @@ vendor/
 Gemfile.lock
 .DS_Store
 report/*test*
+report/*report*
 rerun.txt
