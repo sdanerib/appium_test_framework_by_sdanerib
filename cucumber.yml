@@ -1,0 +1,38 @@
+# ================================================ #
+# ============== EXECUTION PROFILES ============== #
+# ================================================ #
+
+
+# ------------------------ #
+# === ANDROID SETTINGS === #
+# ------------------------ #
+
+#default:            -p run_android
+run_android:  TEST_TYPE=mobile_native   CAPABILITIES=android/6.0/Emulator/local/appium_1.7.2  -p support_values_and_apis  -p android_tests -p local_report
+
+
+# -------------------- #
+# === iOS SETTINGS === #
+# -------------------- #
+#default:            -p run_ios
+run_ios:      TEST_TYPE=mobile_native   CAPABILITIES=iOS/11.2/iPhone_X/local/appium_1.7.2     -p support_values_and_apis  -p ios_tests     -p local_report
+
+
+# -------------------------------- #
+# === Tags to execute profiles === #
+# -------------------------------- #
+android_tests:  --tags @android_test
+ios_tests:      --tags @ios_test
+
+
+# -------------------------- #
+# === Reporting Profiles === #
+# -------------------------- #
+local_report: --format html  --out report/<%=Time.now.strftime("%d_%m_%Y__%H_%M_%S")%>-report.html --format pretty
+ci_report:    --format junit --out report/ --format pretty
+
+
+# ----------------------------------------------- #
+# === Settings in general (app & support api) === #
+# ----------------------------------------------- #
+support_values_and_apis: FIG_NEWTON_FILE=env_local.yml

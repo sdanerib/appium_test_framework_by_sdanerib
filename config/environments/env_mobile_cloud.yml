@@ -1,0 +1,9 @@
+
+# --------------------- #
+# === APPIUM SERVER === #
+# --------------------- #
+remote_appium_url: 'http://saucelabs:4723/wd/hub'
+
+
+# APPIUM SERVICES
+appium_reset:   'appium/app/reset'

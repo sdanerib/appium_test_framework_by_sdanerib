@@ -1,0 +1,9 @@
+# Created by .ignore support plugin (hsz.mob)
+*.idea*
+node_modules/
+vendor/
+.bundle/
+Gemfile.lock
+.DS_Store
+report/*test*
+rerun.txt

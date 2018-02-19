@@ -1,0 +1,25 @@
+
+# ------------------- #
+# === TEST OBJECT === #
+# ------------------- #
+
+# NATIVE APPS
+# Apps built on Java & Swift (Each app has diff construction)
+#android_app: '/config/test_apps/ApiDemos-debug.apk'
+#ios_app:     '/config/test_apps/UICatalog.app.zip'
+
+## NATIVE APPS
+## Apps built on ReactNative (Similar to NativeScript | One & only construction)
+android_app: '/config/test_apps/VodQA.apk'
+ios_app:     '/config/test_apps/VodQAReactNative.app'
+
+
+
+# --------------------- #
+# === APPIUM SERVER === #
+# --------------------- #
+walle_appium_url: 'http://127.0.0.1:4723/wd/hub'
+
+
+# APPIUM SERVICES
+appium_reset:   'appium/app/reset'
